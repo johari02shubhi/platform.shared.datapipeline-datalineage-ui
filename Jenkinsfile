@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        GIT_CREDENTIALS = credentials('github') // Jenkins credentials ID for GitHub
+        GIT_CREDENTIALS = credentials('github_user') // Jenkins credentials ID for GitHub
     }
 
     stages {
