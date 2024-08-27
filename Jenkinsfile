@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'feature/test-cicd', url: 'https://github.com/johari02shubhi/platform.shared.datapipeline-datalineage-ui.git', credentialsId: "${GIT_CREDENTIALS}"
+                git branch: 'feature/test-cicd', url: 'git@github.com:johari02shubhi/platform.shared.datapipeline-datalineage-ui.git', credentialsId: "${GIT_CREDENTIALS}"
             }
         }
 
