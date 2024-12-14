@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'nodejs'  // Make sure NodeJS is configured in Jenkins Global Tool Configuration
+        nodejs 'NodeJS 16.20.0' // Make sure NodeJS is configured in Jenkins Global Tool Configuration
     }
 
     environment {
-        GIT_CREDENTIALS = credentials('github') // Jenkins credentials ID for GitHub
+        GIT_CREDENTIALS = credentials('b1d37b91-47fa-49be-b89f-240e2e1a61ff') // Jenkins credentials ID for GitHub
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/johari02shubhi/platform.shared.datapipeline-datalineage-ui.git', credentialsId: "${GIT_CREDENTIALS}"
+                git branch: 'feature/test-cicd', url: 'git@github.com:johari02shubhi/platform.shared.datapipeline-datalineage-ui.git', credentialsId: "${GIT_CREDENTIALS}"
             }
         }
 
